@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoSQLite.PagDB"
+             Title="Base de Datos" BackgroundColor="Transparent">
+
+    <Grid>
+        <Image Source="basededatos.jpg" Aspect="AspectFill"/>
+        <ScrollView>
+            <VerticalStackLayout Padding="10">
+                <VerticalStackLayout Padding="10" Background="Azure" Margin="20">
+                    <Label Text="Datos" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="Title"/>
+                    <Entry x:Name="ProductoEntry" Placeholder="Producto" TextColor="Black"/>
+                    <Entry x:Name="PrecioEntry" Placeholder="Precio" TextColor="Black"/>
+                    <Entry x:Name="StockEntry" Placeholder="Stock" TextColor="Black"/>
+                    <Entry x:Name="MarcaEntry" Placeholder="Marca" TextColor="Black"/>
+                    <Entry x:Name="VentasEntry" Placeholder="Vendidas" TextColor="Black"/>
+                    <Entry x:Name="EstadoEntry" Placeholder="Estado" TextColor="Black"/>
+                    <Button x:Name="guardarBEntry" Text="Guardar" Clicked="guardarB_Clicked"
+                            FontAttributes="Bold" FontSize="18" BackgroundColor="Black"
+                            TextColor="White"/>
+                </VerticalStackLayout>
+                <Label Text="Base de datos" FontSize="Title" HorizontalOptions="Center"></Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Precio" FontSize="17" FontAttributes="Bold"/>
+                    <Label Grid.Column="2" Text="Stock" FontSize="17" FontAttributes="Bold"/>
+                    <Label Grid.Column="4" Text="Marca" FontSize="17" FontAttributes="Bold"/>
+                    <Label Grid.Column="6" Text="Vendidas" FontSize="17" FontAttributes="Bold"/>
+                    <Label Grid.Column="8" Text="Estado" FontSize="17" FontAttributes="Bold"/>
+                </Grid>
+                <ListView x:Name="listView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="listView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <VerticalStackLayout Padding="5">
+                                    <Label Text="{Binding Producto}" FontSize="17" FontAttributes="Bold,Italic" HorizontalOptions="Center" />
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" Text="{Binding Precio}" />
+                                        <Label Grid.Column="2" Text="{Binding Stock}"/>
+                                        <Label Grid.Column="4" Text="{Binding Marca}"/>
+                                        <Label Grid.Column="6" Text="{Binding Ventas}"/>
+                                        <Label Grid.Column="8" Text="{Binding Estado}"/>
+                                    </Grid>
+                                </VerticalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

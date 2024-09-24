@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoSQLite.Firma"
+             Title="Firma" BackgroundColor="Transparent">
+    <Grid>
+        <Image Source="fondoluna.jpg" Aspect="AspectFill"/>
+        <VerticalStackLayout Padding="35" Spacing="10">
+            <HorizontalStackLayout Spacing="10">
+                <ImageButton Clicked="btipn" Source="ipnlogo.png" Aspect="AspectFill" WidthRequest="150" HeightRequest="150"/>
+                <ImageButton Clicked="btesime" Source="esimelogo.png" Aspect="AspectFill" WidthRequest="170" HeightRequest="155" HorizontalOptions="EndAndExpand"/>
+            </HorizontalStackLayout >
+            <Label Text="Instituto Politecnico Nacional" HorizontalOptions="Center" FontSize="Title" FontFamily="Showcard Gothic" FontAttributes="Bold"/>
+            <Label Text="Escuela Superior de Ingenieria Mecanica y Electrica" HorizontalOptions="Center" FontSize="Subtitle" FontFamily="" FontAttributes="Bold" />
+            <Label Text="Ingenieria en Comunicaciones y Electronica" HorizontalOptions="Center" FontSize="Subtitle" FontFamily="Showcard Gothic" FontAttributes="Bold"/>
+
+            <ImageButton Source="foto.png" Aspect="AspectFill" WidthRequest="150" HeightRequest="150" Clicked="btfoto"/>
+            <Label Text="Alonso Rodríguez Erick Daniel" HorizontalOptions="Center" FontSize="Title" FontFamily="Showcard Gothic" FontAttributes="Bold"/>
+            <Label Text="8CM12" HorizontalOptions="Center" FontSize="Title" FontFamily="Showcard Gothic" FontAttributes="Bold"/>
+            <Label Text="2019301253" HorizontalOptions="Center" FontSize="Title" FontFamily="Showcard Gothic" FontAttributes="Bold"/>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

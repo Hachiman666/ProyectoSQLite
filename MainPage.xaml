@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoSQLite.MainPage"
+             Title="Proyecto 2 P3" BackgroundColor="Transparent">
+    <Grid>
+        <Image Source="shovel.jpg" Aspect="AspectFill" IsAnimationPlaying="True" HorizontalOptions="Center"/>
+        <VerticalStackLayout Padding="35" Spacing="10">
+            <Label Text="Proyecto 2 3er Parcial" HorizontalOptions="Center" FontFamily="8bitOperatorPlus8-Bold" FontSize="Title"/>
+            <Label Text="Base de Datos en MAUI" HorizontalOptions="Center" FontFamily="8bitOperatorPlus8-Bold" FontSize="Title"/>
+            <Button Clicked="btFirma" Text="Base de datos" BackgroundColor="White" BorderColor="Black" BorderWidth="10"
+                    FontAttributes="Bold" FontSize="18" FontFamily="8bitOperatorPlus8-Bold"/>
+            <Button Clicked="btpagdb" Text="Firma" BackgroundColor="White" 
+                    FontAttributes="Bold" FontSize="18" FontFamily="8bitOperatorPlus8-Bold" BorderColor="Black" BorderWidth="10"/>
+            <Button Clicked="btCV" Text="Ciclo de Vida" BackgroundColor="White"
+                    FontAttributes="Bold" FontSize="18" FontFamily="8bitOperatorPlus8-Bold" BorderColor="Black" BorderWidth="10"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
